@@ -52,7 +52,6 @@ const setCurrentPage = (pageNum) => {
 
 const disableButton = (button) => {
   button.classList.add("disabled");
-  button.classList.remove("disabled");
 };
 
 const enableButton = (button) => {
