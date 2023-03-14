@@ -11,6 +11,8 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
     <style>
         .bd-placeholder-img {
             font-size: 1.125rem;
@@ -109,113 +111,122 @@
 
         <div class="album py-5">
             <div class="container">
-                <div class="row mb-3 row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                    <div class="col d-flex align-items-stretch">
-                        <div class="card shadow-sm">
-                            <img src="./lectureImages/courseOutline.png" alt="" srcset="">
-                            <div class="card-body">
-                                <h5 class="card-title">Course Outline</h5>
-                                <p class="card-text">1. Node Fundamentals, File I/O, Web Servers, Expressjs, Sockets,
-                                    Restful APIs, Performance and scaling, DBs, Auth, Deployment CI/CD, prod + cloud,
-                                    GraphQL and bunch of more cool stuff</p>
+                <div class="paginated-list" id="panel1">
+                    <div class="row mb-3 row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                        <div class="col d-flex align-items-stretch">
+                            <div class="card shadow-sm">
+                                <img src="./lectureImages/courseOutline.png" alt="" srcset="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Course Outline</h5>
+                                    <p class="card-text">1. Node Fundamentals, File I/O, Web Servers, Expressjs,
+                                        Sockets,
+                                        Restful APIs, Performance and scaling, DBs, Auth, Deployment CI/CD, prod +
+                                        cloud,
+                                        GraphQL and bunch of more cool stuff</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col d-flex align-items-stretch">
+                            <div class="card shadow-sm">
+                                <img src="./lectureImages/jsenginearch.png" alt="" srcset="">
+                                <div class="card-body">
+                                    <h5 class="card-title">JS Engine architecture</h5>
+                                    <p class="card-text">2. JavaScript Engine - V8, SpiderMonkey, Chakra etc.
+                                        fun fact: Brendon eich, creator of JS, created the very first js engine called
+                                        spider monkey which is used by firefox</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col d-flex align-items-stretch">
+                            <div class="card shadow-sm">
+                                <img src="./lectureImages/interComp.png" alt="" srcset="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Interpreter vs Compiler</h5>
+                                    <p class="card-text">3. JavaScript was an interpreted language, but now things have
+                                        evolved and js can also be a compiled language.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col d-flex align-items-stretch">
-                        <div class="card shadow-sm">
-                            <img src="./lectureImages/jsenginearch.png" alt="" srcset="">
-                            <div class="card-body">
-                                <h5 class="card-title">JS Engine architecture</h5>
-                                <p class="card-text">2. JavaScript Engine - V8, SpiderMonkey, Chakra etc.
-                                    fun fact: Brendon eich, creator of JS, created the very first js engine called
-                                    spider monkey which is used by firefox</p>
+                    <div class="row mb-3 row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                        <div class="col d-flex align-items-stretch">
+                            <div class="card shadow-sm">
+                                <img src="./lectureImages/jitcompiler.png" alt="" srcset="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Just-In-Time (JIT) Compiler</h5>
+                                    <p class="card-text">4. V8 engine has a compiler which provides optimized code
+                                        alongwith
+                                        the byte code generated by interpreter making it a JIT compiled code.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col d-flex align-items-stretch">
+                            <div class="card shadow-sm">
+                                <img src="./lectureImages/redFlags.png" alt="" srcset="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Not To Use</h5>
+                                    <p class="card-text">5. Do not use these functions as it might slow the compiler,
+                                        also
+                                        avoid irregular code to prevent mix up of inline caching and hidden classes</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col d-flex align-items-stretch">
+                            <div class="card shadow-sm">
+                                <img src="./lectureImages/callStackHeapMem.png" alt="" srcset="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Call Stack & Heap Memory</h5>
+                                    <p class="card-text">6. beware of Stack Overflow and Memory leaks
+                                    <p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col d-flex align-items-stretch">
-                        <div class="card shadow-sm">
-                            <img src="./lectureImages/interComp.png" alt="" srcset="">
-                            <div class="card-body">
-                                <h5 class="card-title">Interpreter vs Compiler</h5>
-                                <p class="card-text">3. JavaScript was an interpreted language, but now things have
-                                    evolved and js can also be a compiled language.
-                                </p>
+                    <div class="row mb-3 row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                        <div class="col d-flex align-items-stretch">
+                            <div class="card shadow-sm">
+                                <img src="./lectureImages/callStackHeapMem.png" alt="" srcset="">
+                                <div class="card-body">
+                                    <h5 class="card-title">JS Single Threaded</h5>
+                                    <p class="card-text">7. JS is a single threaded language so it requires other
+                                        components
+                                        to work asycnhronously.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col d-flex align-items-stretch">
+                            <div class="card shadow-sm">
+                                <img src="./lectureImages/jsre.png" alt="" srcset="">
+                                <div class="card-body">
+                                    <h5 class="card-title">JS Runtime environment</h5>
+                                    <p class="card-text">8. Browser implements a javaScript run time environment which
+                                        consists
+                                        of JS engine, Web APIs, Callback Queues and Event loop</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col d-flex align-items-stretch">
+                            <div class="card shadow-sm">
+                                <img src="./lectureImages/node.png" alt="" srcset="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Node</h5>
+                                    <p class="card-text">9. node is a JS runtime outside of browser which consists of V8
+                                        engine for JS and LibUV for Web APIs, callback queue and event loop.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="row mb-3 row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                    <div class="col d-flex align-items-stretch">
-                        <div class="card shadow-sm">
-                            <img src="./lectureImages/jitcompiler.png" alt="" srcset="">
-                            <div class="card-body">
-                                <h5 class="card-title">Just-In-Time (JIT) Compiler</h5>
-                                <p class="card-text">4. V8 engine has a compiler which provides optimized code alongwith
-                                    the byte code generated by interpreter making it a JIT compiled code.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col d-flex align-items-stretch">
-                        <div class="card shadow-sm">
-                            <img src="./lectureImages/redFlags.png" alt="" srcset="">
-                            <div class="card-body">
-                                <h5 class="card-title">Not To Use</h5>
-                                <p class="card-text">5. Do not use these functions as it might slow the compiler, also
-                                    avoid irregular code to prevent mix up of inline caching and hidden classes</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col d-flex align-items-stretch">
-                        <div class="card shadow-sm">
-                            <img src="./lectureImages/callStackHeapMem.png" alt="" srcset="">
-                            <div class="card-body">
-                                <h5 class="card-title">Call Stack & Heap Memory</h5>
-                                <p class="card-text">6. beware of Stack Overflow and Memory leaks
-                                <p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mb-3 row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                    <div class="col d-flex align-items-stretch">
-                        <div class="card shadow-sm">
-                            <img src="./lectureImages/callStackHeapMem.png" alt="" srcset="">
-                            <div class="card-body">
-                                <h5 class="card-title">JS Single Threaded</h5>
-                                <p class="card-text">7. JS is a single threaded language so it requires other components
-                                    to work asycnhronously.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col d-flex align-items-stretch">
-                        <div class="card shadow-sm">
-                            <img src="./lectureImages/jsre.png" alt="" srcset="">
-                            <div class="card-body">
-                                <h5 class="card-title">JS Runtime environment</h5>
-                                <p class="card-text">8. Browser implements a javaScript run time environment which
-                                    consists
-                                    of JS engine, Web APIs, Callback Queues and Event loop</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col d-flex align-items-stretch">
-                        <div class="card shadow-sm">
-                            <img src="./lectureImages/node.png" alt="" srcset="">
-                            <div class="card-body">
-                                <h5 class="card-title">Node</h5>
-                                <p class="card-text">9. node is a JS runtime outside of browser which consists of V8
-                                    engine for JS and LibUV for Web APIs, callback queue and event loop.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mb-3 row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                    <div class="col d-flex align-items-stretch">
-                        <div class="card shadow-sm">
-                            <img src="./lectureImages/noderepl.png" alt="" srcset="">
-                            <div class="card-body">
-                                <h5 class="card-title">Node REPL</h5>
-                                <p class="card-text">10. Node provides a Read-Eval-Print-Loop environment where one can write js code directly, not preferable though.</p>
+                    <div class="row mb-3 row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                        <div class="col d-flex align-items-stretch">
+                            <div class="card shadow-sm">
+                                <img src="./lectureImages/noderepl.png" alt="" srcset="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Node REPL</h5>
+                                    <p class="card-text">10. Node provides a Read-Eval-Print-Loop environment where one
+                                        can
+                                        write js code directly, not preferable though.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -224,17 +235,17 @@
         </div>
         <nav aria-label="Page navigation example">
             <ul class="pagination justify-content-center">
-              <li class="page-item disabled">
-                <a class="page-link">Previous</a>
-              </li>
-              <li class="page-item"><a class="page-link" href="#">1</a></li>
-              <li class="page-item"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-              <li class="page-item">
-                <a class="page-link" href="#">Next</a>
-              </li>
+                <li class="page-item">
+                    <a class="page-link" id="previous">Previous</a>
+                </li>
+                <li>
+                    <ul class="pagination justify-content-center pagination-numbers"> </ul>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" id="next">Next</a>
+                </li>
             </ul>
-          </nav>
+        </nav>
     </main>
 
     <footer class="text-muted py-5">
@@ -245,6 +256,7 @@
             <p class="mb-1">Stay Hungry, Stay Foolish</p>
         </div>
     </footer>
+    <script src="./resources/index.js"></script>
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
