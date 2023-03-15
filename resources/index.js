@@ -60,7 +60,7 @@ const enableButton = (button) => {
 };
 
 const handleActiveButtons = () => {
-    console.log(currentPage);
+  console.log(currentPage);
   if (currentPage === 1) {
     disableButton(prevButton);
   } else {
