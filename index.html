@@ -234,7 +234,58 @@
                                 <img src="./lectureImages/diffnodejs.png" alt="" srcset="">
                                 <div class="card-body">
                                     <h5 class="card-title">Node vs JavaScript</h5>
-                                    <p class="card-text">11. Node has certain functionality different than what we see in javaScript.</p>
+                                    <p class="card-text">11. Node has certain functionality different than what we see
+                                        in javaScript.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col d-flex align-items-stretch">
+                            <div class="card shadow-sm">
+                                <img src="./lectureImages/multiThread.png" alt="" srcset="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Node MultiThreading</h5>
+                                    <p class="card-text">12. Since js is a single threaded lang, Node add certain
+                                        functionality to make multithreading easy, For asynch tasks like filesystems i/o
+                                        it uses thread pool of 4 concurrent independent threads, while network ops are
+                                        handled by OS kernel, Event loop is responsible for sending back callbacks
+                                        returns.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-3 row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                        <div class="col d-flex align-items-stretch">
+                            <div class="card shadow-sm">
+                                <img src="./lectureImages/phasesOfEventLoop.png" alt="" srcset="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Phases of Event Loop</h5>
+                                    <p class="card-text">13. Event loop works in phases with mainly 4 types of callback
+                                        queues shown above. All this phases have their respective callback functions
+                                        waiting in queue to be executed. One cycle of all these phase completion is
+                                        called 1 event loop.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col d-flex align-items-stretch">
+                            <div class="card shadow-sm">
+                                <img src="./lectureImages/tradModel.png" alt="" srcset="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Traditional Model</h5>
+                                    <p class="card-text">14. Programming langs like Php and python uses a web server
+                                        like apache or nginx to take care of requests. But it has blocking elements, to
+                                        hadnle this server spawns a separate thread for every client and that creates an
+                                        overhead on resources</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col d-flex align-items-stretch">
+                            <div class="card shadow-sm">
+                                <img src="./lectureImages/nodeModel.png" alt="" srcset="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Node Model</h5>
+                                    <p class="card-text">15. In case of Node there's libUV which takes of care of
+                                        asynchronous operation and event loop which performs callback execution. Also
+                                        there's a limited set of thread pool hence no need to spawn more threads.</p>
                                 </div>
                             </div>
                         </div>
