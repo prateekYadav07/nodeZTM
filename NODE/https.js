@@ -17,11 +17,11 @@
 // import { send } from "./Modules/request.js";
 // import { read } from "./Modules/response.js";
 
-const modules = require('./Modules')
+const {send, read} = require('./Modules')
 
 function request(url, data) {
-  modules.request.send(url, data);
-  return modules.response.read();
+  send(url, data);
+  return read();
 }
 
 console.log(request("url", "data"));

@@ -1,4 +1,11 @@
+// one way
+// module.exports = {
+//     request : require('./request'),
+//     response : require('./response')
+// }
+
+// other way: using spread operator
 module.exports = {
-    request : require('./request'),
-    response : require('./response')
+    ...require('./request'),
+    ...require('./response')
 }
