@@ -19,14 +19,15 @@ const supes = [
 
 const server = http.createServer((req, res) => {
   const items = req.url.split("/");
-  if(req.method==='POST' && items[1] === 'supes'){
-    req.on('data', (data) => {
+  if (req.method === "POST" && items[1] === "supes") {
+    req.on("data", (data) => {
       const supe = data.toString();
-      console.log(supe);
-      supes.push(JSON.parse(supe))
-    })
-  }
-  else if (req.method==='GET' && items[1] === "supes") {
+      const supeObj = JSON.parse(supe);
+      supeObj["id"] = supes.length + 1;
+      supes.push(supeObj);
+    });
+    req.pipe(res);
+  } else if (req.method === "GET" && items[1] === "supes") {
     res.statusCode = 200;
     res.setHeader("Content-Type", "application/json");
     if (items.length === 3) {
@@ -34,7 +35,7 @@ const server = http.createServer((req, res) => {
     } else {
       res.end(JSON.stringify(supes));
     }
-  } else if (req.method==='GET' && items[1] === "messages") {
+  } else if (req.method === "GET" && items[1] === "messages") {
     res.setHeader("Content-Type", "text/plain");
     res.write("messages chunk");
     res.end();
