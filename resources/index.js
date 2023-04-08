@@ -3,7 +3,7 @@ const paginatedList = document.querySelector(".paginated-list");
 const listItems = paginatedList.querySelectorAll("div.row");
 const nextButton = document.getElementById("next");
 const prevButton = document.getElementById("previous");
-
+console.log(listItems.length);
 const paginationLimit = 2;
 const pageCount = Math.ceil(listItems.length / paginationLimit);
 let currentPage;
@@ -14,7 +14,6 @@ const appendPageNumber = (index) => {
   pageNumber.innerHTML = `<a class="page-link">${index}</a>`;
   pageNumber.setAttribute("page-index", index);
   pageNumber.setAttribute("aria-label", "Page " + index);
-
   paginationNumbers.append(pageNumber);
 };
 
