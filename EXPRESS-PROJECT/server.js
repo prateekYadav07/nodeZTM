@@ -20,14 +20,24 @@ app.use((req, res, next) => {
   console.log(`${req.method} ${req.url} ${delta}`);
 });
 
+app.use(express.json());
+
 app.get("/", (req, res) => {
   res.send("hello");
 });
 
 app.get("/friends", (req, res) => {
-  setTimeout(() => {
-    res.json(friends);
-  }, 3000);
+  res.json(friends);
+});
+
+app.post("/friends", (req, res) => {
+  if (!req.body.name) return res.status(400).json({ error: "Bad request" });
+  const newFriend = {
+    id: friends.length,
+    name: req.body.name,
+  };
+  friends.push(newFriend);
+  res.json(newFriend);
 });
 
 // route parameters
